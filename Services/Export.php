@@ -186,7 +186,7 @@ class Export
         foreach ($data as $line) {
 
             foreach ($line as $key => $col) {
-                if (!isset($options['zebra'])) {
+                if (!isset($options['zebra']) || $options['zebra'] !== false) {
                     if ($zebra % 2 == 1) {
                         $this->chartCustomizeCell(array(
                             'fill' => isset($options['zebra']['color']) ? $options['zebra']['color'] : 'a0c5e3',
